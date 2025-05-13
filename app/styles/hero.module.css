@@ -1,0 +1,54 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .container {
+    width: 100%;
+    max-width: 1300px;
+    z-index: 2;
+}
+
+.hero .container h2 {
+    color: #C6C9D8BF;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero .container h1 {
+    font-size: 75px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 90px;
+    text-transform: inherit;
+}
+
+.hero .container h3 {
+    font-size: 54px;
+    font-weight: 700;
+    color: #3568aa;
+}
+
+.hero .container_image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.photo {
+    object-fit: cover;
+}
