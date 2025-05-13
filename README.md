@@ -1,7 +1,7 @@
 # Portfolio - Maxime Sechaud
 
 Bienvenue sur le dépôt GitHub de mon portfolio professionnel.  
-Ce projet a pour but de présenter mes compétences, mes réalisations et mon parcours en tant qu'apprenti médiamaticien.
+J’ai créé ce projet pour partager mon parcours et mes compétences acquises durant ma première année d’apprentissage en médiamatique.
 
 ------
 
@@ -11,13 +11,13 @@ Lien vers mon portfolio : https://ms-portfolio.ch
 
 ------
 
-## Fonctionnalités
+## Contenue du portfolio
 
-- Présentation personnelle
-- Projets avec descriptions et images
-- Téléchargement de mon CV en PDF
-- Design responsive (adapté mobile, tablette et desktop)
-- Liens vers mes réseaux et mon GitHub
+- Introduction personnelle présentant mon profil et mon parcours
+- Affichage de mon portrait
+- Téléchargement de mon CV au format PDF
+- Affichage de mes coordonnées professionnelles
+- Exemples de projets concrets développés durant ma formation
 
 ------
 
