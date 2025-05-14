@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/experience.module.css";
@@ -79,7 +80,9 @@ export default function Experience() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const wrapperRef = useRef<HTMLDivElement>(null);
     const popupRefs = useRef<Array<HTMLDivElement | null>>([]);
-  
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const paragraphRef = useRef<HTMLParagraphElement>(null);
+
     const visibleExperiences = experiences.slice(currentIndex, currentIndex + 2);
 
     const setPopupRef = (index: number) => (el: HTMLDivElement | null) => {
@@ -99,6 +102,9 @@ export default function Experience() {
     };   
 
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+
         const ctx = gsap.context(() => {
           popupRefs.current.forEach((popup) => {
             if (popup) {
@@ -115,6 +121,41 @@ export default function Experience() {
               );
             }
           });
+
+          if (titleRef.current) {
+            gsap.fromTo(
+              titleRef.current,
+              { y: 20, opacity: 0 },
+              {
+                y: 0,
+                opacity: 1,
+                duration: 1.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: titleRef.current,
+                  start: "top 80%",
+                },
+              }
+            );
+          }
+
+          if (paragraphRef.current) {
+            gsap.fromTo(
+              paragraphRef.current,
+              { y: 20, opacity: 0 },
+              {
+                y: 0,
+                opacity: 1,
+                duration: 1.5,
+                delay: 0.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: paragraphRef.current,
+                  start: "top 80%",
+                },
+              }
+            );
+          }
         }, wrapperRef);
       
         return () => ctx.revert();
@@ -124,8 +165,10 @@ export default function Experience() {
         <section className={styles.experience}>
 
             <div className={styles.container_title}>
-                <h3>Une trajectoire construite par l’expérience</h3>
-                <p>Depuis mon adolescence, j’ai eu l’occasion de faire plusieurs stages dans des domaines variés. J’ai exploré le travail manuel, la restauration, la logistique et même l’assurance. Ces expériences m’ont permis de mieux comprendre ce que j’aime faire. À la suite de problèmes de santé, je me suis tourné vers un métier plus sédentaire. Ce choix m’a rapproché de ma passion pour le digital, et la médiamatique est vite devenue une évidence.</p>
+                <h3 ref={titleRef}>Une trajectoire construite par l’expérience</h3>
+                <p ref={paragraphRef}>
+                  Depuis mon adolescence, j’ai eu l’occasion de faire plusieurs stages dans des domaines variés. J’ai exploré le travail manuel, la restauration, la logistique et même l’assurance. Ces expériences m’ont permis de mieux comprendre ce que j’aime faire. À la suite de problèmes de santé, je me suis tourné vers un métier plus sédentaire. Ce choix m’a rapproché de ma passion pour le digital, et la médiamatique est vite devenue une évidence.
+                </p>
             </div>
 
             <div className={styles.container}>

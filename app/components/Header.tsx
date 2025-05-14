@@ -8,7 +8,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faCode, faFilePdf, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { useState, useEffect } from "react";
-import { Squash as Hamburger } from "hamburger-react";
+import { Sling as Hamburger } from 'hamburger-react'
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
