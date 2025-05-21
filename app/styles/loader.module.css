@@ -7,15 +7,29 @@
     background: #000;
 }
 
-.loader .logo {
-    width: 200px;
-    height: auto;
-}
-
 .loader .cls_2 {
     fill: #3568aa;
 }
 
 .loader .cls_1 {
     fill: #fff;
+}
+
+
+@media (min-width: 0px) and (max-width: 500px) {
+
+    .loader .logo {
+        width: 120px;
+        height: auto;
+    }
+
+}
+
+@media (min-width: 500px) {
+
+    .loader .logo {
+        width: 200px;
+        height: auto;
+    }
+
 }

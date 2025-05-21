@@ -102,9 +102,6 @@ export default function Experience() {
     };   
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-
         const ctx = gsap.context(() => {
           popupRefs.current.forEach((popup) => {
             if (popup) {
@@ -116,12 +113,21 @@ export default function Experience() {
                   opacity: 1,
                   duration: 0.8,
                   ease: "power2.out",
-                  delay: 0.1
+                  delay: 0.1,
                 }
               );
             }
           });
+        }, wrapperRef);
 
+        return () => ctx.revert();
+    }, [currentIndex]);
+
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const ctx = gsap.context(() => {
           if (titleRef.current) {
             gsap.fromTo(
               titleRef.current,
@@ -134,6 +140,7 @@ export default function Experience() {
                 scrollTrigger: {
                   trigger: titleRef.current,
                   start: "top 80%",
+                  once: true,
                 },
               }
             );
@@ -152,14 +159,15 @@ export default function Experience() {
                 scrollTrigger: {
                   trigger: paragraphRef.current,
                   start: "top 80%",
+                  once: true,
                 },
               }
             );
           }
         }, wrapperRef);
-      
+
         return () => ctx.revert();
-      }, [currentIndex]);
+    }, []);
 
     return (
         <section className={styles.experience}>
