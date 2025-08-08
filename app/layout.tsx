@@ -18,6 +18,10 @@ const montserrat = Montserrat({
 export const metadata = {
     title: "Portfolio | Maxime Séchaud",
     description: "Un site développé avec Next.js",
+    robots: {
+        index: false,
+        follow: false,
+    },
 };
 
 export default function RootLayout({
