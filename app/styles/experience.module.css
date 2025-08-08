@@ -1,14 +1,3 @@
-.experience {
-    width: 100%;
-    padding: 150px 0px 150px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #0f0f0f;
-}
-
-
 @media (min-width: 0px) and (max-width: 650px) {
 
     .experience .container_title {
@@ -167,7 +156,17 @@
 }
 
 
-@media (min-width: 0px) and (max-width: 600px) {        
+@media (min-width: 0px) and (max-width: 600px) {       
+    
+    .experience {
+        width: 100%;
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #0f0f0f;
+    }
 
     .experience .container .slider {
         display: flex;
@@ -238,6 +237,16 @@
 
 @media (min-width: 600px) and (max-width: 960px) {        
 
+    .experience {
+        width: 100%;
+        padding: 80px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #0f0f0f;
+    }
+
     .experience .container .slider {
         display: flex;
         width: 100%;
@@ -306,6 +315,16 @@
 }
 
 @media (min-width: 960px) {
+
+    .experience {
+        width: 100%;
+        padding: 150px 0px 150px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #0f0f0f;
+    }
 
     .experience .container .slider {
         display: flex;
