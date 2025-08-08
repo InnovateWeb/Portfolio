@@ -19,8 +19,6 @@ Lien vers mon portfolio : www.maximesechaud.ch
 
 - Next.js 15.2.4
 - React 19
-- TypeScript
-- CSS Modules
 - Framer Motion
 - GSAP
 - Swiper
