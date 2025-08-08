@@ -1,0 +1,437 @@
+.experience {
+    width: 100%;
+    padding: 150px 0px 150px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0f0f0f;
+}
+
+
+@media (min-width: 0px) and (max-width: 650px) {
+
+    .experience .container_title {
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 100px;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience .container_title h3 {
+        width: 100%;
+        font-size: 35px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .experience  .container_title p {
+        margin: 0 auto;
+        width: 300px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        color: #C6C9D8BF;
+        text-align: center;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 850px) {
+
+    .experience .container_title {
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 100px;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience .container_title h3 {
+        width: 100%;
+        font-size: 50px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        line-height: 70px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .experience  .container_title p {
+        margin: 0 auto;
+        width: 500px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        color: #C6C9D8BF;
+        text-align: center;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1030px) {
+
+    .experience .container_title {
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 150px;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience .container_title h3 {
+        width: 100%;
+        font-size: 50px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        line-height: 70px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .experience  .container_title p {
+        margin: 0 auto;
+        width: 600px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #C6C9D8BF;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1030px) and (max-width: 1315px) {
+
+    .experience .container_title {
+        width: 100%;
+        margin-bottom: 150px;
+        padding: 0px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .experience .container_title h3 {
+        width: 50%;
+        font-size: 50px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        line-height: 70px;
+    }
+
+    .experience  .container_title p {
+        width: 50%;
+        margin-top: 14px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #C6C9D8BF;
+    }
+}
+
+@media (min-width: 1315px) {
+
+    .experience .container_title {
+        width: 100%;
+        max-width: 1300px;
+        margin-bottom: 150px;
+        padding: 0px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .experience .container_title h3 {
+        width: 50%;
+        font-size: 55px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        line-height: 70px;
+    }
+
+    .experience  .container_title p {
+        width: 50%;
+        margin-top: 14px;
+        font-size: 18px;
+        font-weight: 400;
+        color: #C6C9D8BF;
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 600px) {        
+
+    .experience .container .slider {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        position: relative;
+    }
+
+    .experience .container .date {
+        position: absolute;
+        top: 0;
+        transform: translateY(40px);
+        font-size: 17px;
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .experience .container .point {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-38%);
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #3568aa;
+        z-index: 2;
+    }
+
+    .experience .container .popup {
+        position: absolute;
+        bottom: calc(100% + 30px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 290px;
+        height: 160px;
+        padding: 0px;
+        will-change: transform, opacity;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .experience .container .popup h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .experience .container .popup .description {
+        margin: 8px 0 0;
+        font-size: 15px;
+        font-weight: 300;
+        color: #C6C9D8BF;
+    }
+        
+    .experience .container .popup .subtitle {
+        margin: 8px 0 0;
+        font-size: 15px;
+        font-weight: 500;
+        font-style: italic;
+        color: #3568aa;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 960px) {        
+
+    .experience .container .slider {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        position: relative;
+    }
+
+    .experience .container .date {
+        position: absolute;
+        top: 0;
+        transform: translateY(40px);
+        font-size: 17px;
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .experience .container .point {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-38%);
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #3568aa;
+        z-index: 2;
+    }
+
+    .experience .container .popup {
+        position: absolute;
+        bottom: calc(100% + 30px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 450px;
+        height: 160px;
+        padding: 15px;
+        will-change: transform, opacity;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .experience .container .popup h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .experience .container .popup .description {
+        margin: 8px 0 0;
+        font-size: 15px;
+        font-weight: 300;
+        color: #C6C9D8BF;
+    }
+        
+    .experience .container .popup .subtitle {
+        margin: 8px 0 0;
+        font-size: 15px;
+        font-weight: 500;
+        font-style: italic;
+        color: #3568aa;
+    }
+}
+
+@media (min-width: 960px) {
+
+    .experience .container .slider {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .experience .container .date {
+        position: absolute;
+        top: 0;
+        transform: translateY(40px);
+        font-size: 17px;
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .experience .container .point {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-38%);
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #3568aa;
+        z-index: 2;
+    }
+
+    .experience .container .popup {
+        position: absolute;
+        bottom: calc(100% + 30px);
+        width: 450px;
+        height: 160px;
+        padding: 15px;
+        will-change: transform, opacity;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .experience .container .popup h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .experience .container .popup .description {
+        margin: 8px 0 0;
+        font-size: 15px;
+        font-weight: 300;
+        color: #C6C9D8BF;
+    }
+        
+    .experience .container .popup .subtitle {
+        margin: 8px 0 0;
+        font-size: 15px;
+        font-weight: 500;
+        font-style: italic;
+        color: #3568aa;
+    }
+}
+
+.experience .container {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    padding: 180px 40px;
+}
+
+.experience .container .line {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    margin: 0 auto;
+    background-color: #313131;
+}
+
+.experience .container .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+        
+.experience .container .controls {
+    position: absolute;
+    width: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.experience .container .controls span {
+    background: #ffffff27;
+    color: white;
+    border: none;
+    width: 65px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience .container .controls button {
+    background: #ffffff27;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: .3s background-color;
+    cursor: pointer;
+}
+
+.experience .container .controls button:hover {
+    background-color: #3568aa;
+}
