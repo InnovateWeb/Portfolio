@@ -1,5 +1,6 @@
 import "./styles/globals.css";
 import { Poppins, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -32,7 +33,10 @@ export default function RootLayout({
     return (
         <html lang="fr" className={`${poppins.variable} ${montserrat.variable}`}>
             <head />
-            <body>{children}</body>
+            <body>
+                {children}
+                <Analytics />
+            </body>
         </html>
     );
 }
