@@ -171,7 +171,7 @@ export default function Experience() {
 			<div className={styles.container_title}>
 				<h3 ref={titleRef}>Une trajectoire construite par l’expérience</h3>
 				<p ref={paragraphRef}>
-				Depuis mon adolescence, j’ai eu l’occasion de faire plusieurs stages dans des domaines variés. J’ai exploré le travail manuel, la restauration, la logistique et même l’assurance. Ces expériences m’ont permis de mieux comprendre ce que j’aime faire. À la suite de problèmes de santé, je me suis tourné vers un métier plus sédentaire. Ce choix m’a rapproché de ma passion pour le digital, et la médiamatique est vite devenue une évidence.
+				Depuis mon adolescence, j’ai eu l’occasion de faire plusieurs stages dans des domaines variés. J’ai exploré le travail manuel, la restauration, la logistique et même l’assurance. Ces expériences m’ont permis de mieux comprendre ce que j’aime faire. À la suite de problèmes de santé, je me suis tourné vers un métier plus polyvalent. Ce choix m’a rapproché de ma passion pour le digital, et la médiamatique est vite devenue une évidence.
 				</p>
 			</div>
 
