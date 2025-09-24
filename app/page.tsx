@@ -1,6 +1,5 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Loader from "./components/Loader";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -13,25 +12,17 @@ import Footer from "./components/Footer";
 export default function Portfolio() {
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-        setIsLoading(false);
-        }, 1600);
-
-        return () => clearTimeout(timer);
-    }, []);
-
     return isLoading ? (
-        <Loader />
+        <Loader onComplete={() => setIsLoading(false)} />
     ) : (
         <div>
-            <Header />
-            <Hero />
-            <About />
-            <Skills />
-            <Project />
-            <Experience />
-            <Footer />
+        <Header />
+        <Hero />
+        <About />
+        <Skills />
+        <Project />
+        <Experience />
+        <Footer />
         </div>
     );
 }

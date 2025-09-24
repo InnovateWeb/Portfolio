@@ -1,38 +1,65 @@
 "use client";
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "../styles/loader.module.css";
 
-const Loader = () => {
-    return (
-        <div className={styles.loader}>
-            <motion.svg
-                className={`logo ${styles.logo}`}
-                id="Chargement"
-                data-name="Chargement"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 246.11 219.32"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{
-                type: "spring",
-                stiffness: 50,
-                damping: 8,
-                duration: 0.8,
-                }}
-            >
-                <g id="Chargement-2" data-name="Chargement">
-                <path
-                    className={styles.cls_2}
-                    d="M187.85,219.31H30.55c-18.97,0-33.35-17.12-30.08-35.81L28.18,25.27C30.74,10.66,43.42,0,58.26,0h157.31c18.97,0,33.35,17.12,30.08,35.81l-27.71,158.24c-2.56,14.61-15.25,25.27-30.08,25.27Z"
-                />
-                <path
-                    className={styles.cls_1}
-                    d="M115.77,182.66c-14.74,0-26.6-3.01-35.59-9.02-8.99-6.01-15.1-14.38-18.33-25.12l33.55-17.26c4.14,10.35,12.02,15.52,23.66,15.52,9.18,0,14.22-2.39,15.13-7.17.26-1.55,0-2.91-.78-4.07s-2.13-2.2-4.07-3.1c-1.94-.9-3.75-1.68-5.43-2.33-1.68-.65-4.04-1.42-7.08-2.33-3.04-.9-5.4-1.62-7.08-2.13-24.05-8.4-34.2-23.27-30.45-44.61,2.2-12.15,8.15-21.92,17.84-29.28,9.7-7.37,21.53-11.06,35.49-11.06,11.64,0,21.59,2.71,29.87,8.15,8.27,5.43,14.55,13.25,18.81,23.47l-32.78,17.46c-3.36-8.79-9.5-13.19-18.42-13.19-6.72,0-10.6,2.33-11.64,6.98-.52,2.85.65,5.17,3.49,6.98,2.84,1.81,8.66,4.2,17.46,7.17,5.56,1.81,10.18,3.66,13.87,5.53,3.69,1.88,7.43,4.49,11.25,7.85,3.81,3.36,6.4,7.69,7.76,12.99,1.36,5.3,1.45,11.51.29,18.62-2.33,13.19-8.44,23.15-18.33,29.87s-22.72,10.08-38.5,10.08h.01Z"
-                />
-                </g>
-            </motion.svg>
-        </div>
-    );
+type LoaderProps = {
+  onComplete?: () => void;
 };
 
-export default Loader;
+export default function Loader({ onComplete }: LoaderProps) {
+	const doneRef = useRef(false);
+	const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+	useEffect(() => {
+		return () => {
+		if (timeoutRef.current) clearTimeout(timeoutRef.current);
+		};
+	}, []);
+
+	const handleSecondDone = () => {
+		if (doneRef.current) return;
+		doneRef.current = true;
+
+		timeoutRef.current = setTimeout(() => {
+		onComplete?.();
+		}, 800);
+	};
+
+	return (
+		<div className={styles.loader}>
+			<motion.svg
+				className={`logo ${styles.logo}`}
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 914.87 707.43"
+				initial="hidden"
+				animate="visible"
+			>
+				<motion.polygon
+				fill="#3568aa"
+				points="314.42 0 0 707.43 122.09 707.43 294.88 318.65 294.88 707.43 406.45 707.43 406.45 0 314.42 0"
+				variants={{
+					hidden: { opacity: 0 },
+					visible: {
+					opacity: 1,
+					transition: { duration: 0.4 }
+					}
+				}}
+				/>
+
+				<motion.polygon
+				fill="#3568aa"
+				points="861.14 111.58 914.87 0 534.45 0 439.58 218.93 439.58 222.26 439.58 248.28 439.58 248.28 439.58 359.85 631.15 359.85 533.75 595.86 439.57 595.86 439.57 707.43 608.4 707.43 734.25 402.48 784.75 280.12 789.63 268.29 797.89 248.28 748.05 248.28 693.76 248.28 559.64 248.28 559.64 222.26 559.73 222.26 607.7 111.57 737.32 111.57 737.31 111.58 861.14 111.58"
+				variants={{
+					hidden: { opacity: 0 },
+					visible: {
+					opacity: 1,
+					transition: { duration: 0.4, delay: 0.8 }
+					}
+				}}
+				onAnimationComplete={handleSecondDone}
+				/>
+			</motion.svg>
+		</div>
+	);
+}

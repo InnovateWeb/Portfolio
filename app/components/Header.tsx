@@ -69,11 +69,10 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <Image
-                className={styles.logo}
                 src="/images/Logo.svg"
                 alt="Logo"
-                width={isMobile ? 140 : 170}
-                height={isMobile ? 45 : 45}
+                width={isMobile ? 52 : 70}
+                height={isMobile ? 52 : 70}
                 priority
             />
 

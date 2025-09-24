@@ -19,7 +19,7 @@
 @media (min-width: 0px) and (max-width: 500px) {
 
     .loader .logo {
-        width: 120px;
+        width: 100px;
         height: auto;
     }
 
@@ -28,7 +28,7 @@
 @media (min-width: 500px) {
 
     .loader .logo {
-        width: 200px;
+        width: 300px;
         height: auto;
     }
 
