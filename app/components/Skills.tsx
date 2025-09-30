@@ -7,18 +7,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const competencesProgrammation = [
 	{ label: "HTML & CSS", pourcentage: 100 },
-	{ label: "JavaScript", pourcentage: 75 },
-	{ label: "React", pourcentage: 80 },
-	{ label: "Next.Js", pourcentage: 78 },
+	{ label: "JavaScript", pourcentage: 85 },
+	{ label: "React", pourcentage: 85 },
+	{ label: "Next.Js", pourcentage: 80 },
 	{ label: "Git", pourcentage: 90 },
 ];
 
 const competencesDesign = [
-	{ label: "Adobe Photoshop", pourcentage: 76 },
-	{ label: "Adobe Illustrator", pourcentage: 86 },
-	{ label: "Adobe Lightroom", pourcentage: 84 },
-	{ label: "Figma", pourcentage: 68 },
-	{ label: "Suite Microsoft", pourcentage: 80 },
+	{ label: "Adobe Photoshop", pourcentage: 70 },
+	{ label: "Adobe Illustrator", pourcentage: 90 },
+	{ label: "Adobe Lightroom", pourcentage: 85 },
+	{ label: "Figma", pourcentage: 80 },
+	{ label: "Suite Microsoft", pourcentage: 70 },
 ];
 
 const Competences = () => {
