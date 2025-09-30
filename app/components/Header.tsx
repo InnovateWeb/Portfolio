@@ -71,8 +71,8 @@ export default function Header() {
             <Image
                 src="/images/Logo.svg"
                 alt="Logo"
-                width={isMobile ? 52 : 70}
-                height={isMobile ? 52 : 70}
+                width={isMobile ? 52 : 65}
+                height={isMobile ? 52 : 65}
                 priority
             />
 
