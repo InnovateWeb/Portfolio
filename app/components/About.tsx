@@ -38,7 +38,7 @@ export default function About() {
                 <div className={styles.container_info}>
                     <h2>À propos</h2>
                     <p>
-                        Apprenti de deuxième année âgé de 21 ans. J’ai commencé mon apprentissage à l’Orif de Pomy. Avant cela, je me suis formé par moi-même, en autodidacte, en suivant des tutoriels sur le développement web, l’informatique et l’utilisation des outils de la suite Adobe, notamment pour la création d’identités visuelles. Aujourd’hui, je suis passionné par ce que je fais et je m’investis pleinement dans mon apprentissage.
+                        Apprenti de deuxième année âgé de 21 ans. J’ai commencé mon apprentissage à l’Orif de Pomy. Avant cela, je me suis formé par moi-même, en autodidacte, en suivant des tutoriels sur le développement web, l’informatique et l’utilisation des outils de la suite Adobe, notamment pour la création d’identités visuelles. Aujourd’hui, je suis passionné par ce que je fais et je m’investis pleinement dans mon apprentissage. Je suis actuellement à la recherche d’un stage pour mettre en pratique mes compétences et développer mon expérience professionnelle.
                     </p>
 
                     <ul className={styles.list_competences}>
